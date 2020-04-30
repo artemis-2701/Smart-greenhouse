@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firebase</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <!-- Bootstrap Material Design -->
+        <link rel="stylesheet"
+              href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+              integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+              crossorigin="anonymous">
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+        <style>
+            
+            .card {
+                border:5px solid black;
+                border-radius:30px;
+                margin: 0 auto; /* Added */
+                float: none; /* Added */
+                margin-bottom: 10px; /* Added */
+                margin-top: 10px
+            }
+            
+        </style>
+        <style>
+body {
+  background-image: url('blue.jpg');
+  height:100%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+ button{
+        font-family:Comic Sans MS;
+        font-size: 50px;
+        padding: 5px 20px;
+        float: left;
+        border-radius: 30px;
+
+    }
+
+.div1{
+
+    border:10px black;
+    padding:20px 60px 150px 50px;
+    height:250px;
+    background-color: #043F6D;
+}
+</style>
+        
+    </head>
+    <body>
+        
+        <div class="div1">
+            <center>
+                <<h1 style=" font-size:75px ; color: white; font-family:Comic Sans MS ">Greenhouse Details</h1>
+            </center>
+             <p style="text-align:left" >
+                <p>
+                    <button onclick="window.location.href = 'https://bhavani0121.github.io/SGH.github.io/webapp/public/my.html';"><h2>Back</h2></button>
+                </p>
+                <br>
+                <br>
+             </p>
+                
+            
+        </div>
+       
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-7"> <!-- Temperature Column -->
+                <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                    <div style="font-size: 50px; font-family:  Comic Sans MS;" class="card-header">Soil Moisture</div>
+                     <img src="soil.jpg" height="350" >
+                    <div class="card-body">
+                        <h1 id="SoilMoisture_1" style="font-size: 40px;" class="card-title">% -Plant1</h1>
+                        <h1 id="SoilMoisture_2" style="font-size: 40px;" class="card-title">% -Plant2</h1>
+                        <p style="font-size: 30px; font-family:  Comic Sans MS">in per cm3</p>
+                        
+                        <form action="http://localhost:5000" method="POST">
+                            
+                          </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"> <!-- Humidity Column -->
+                <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                    <div style="font-size: 50px;  font-family:  Comic Sans MS;" class="card-header">Light</div>
+                     <img src="sunlight1.jpg" height="350">
+                    <div class="card-body">
+                        <h1 id="Light" style="font-size: 50px;" class="card-title"><span>%</span></h1>
+                        <p style="font-size: 40px; font-family:  Comic Sans MS">in lux</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7"> <!-- Temperature Column -->
+                <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                    <div style="font-size: 50px; font-family:  Comic Sans MS;" class="card-header">Temperature</div>
+                     <img src="temp.jpg" height="350">
+                    <div class="card-body">
+                        <h1 id="Temperature" style="font-size: 50px;" class="card-title">°C</h1>
+                        <p style="font-size: 40px; font-family:  Comic Sans MS">in °C</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"> <!-- Humidity Column -->
+                <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                    <div style="font-size: 50px; font-family:  Comic Sans MS;" class="card-header">Humidity</div>
+                     <img src="humid.jpg" height="350">
+                    <div class="card-body">
+                        <h1 id="Humidity" style="font-size: 50px;" class="card-title"><span>%</span></h1>
+                        <p style="font-size: 40px; font-family:  Comic Sans MS">in %</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Needed for Bootstrap Material Design -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+        <!-- Firebase App -->
+        <script src="app.js"></script>
+    </body>
+</html>
